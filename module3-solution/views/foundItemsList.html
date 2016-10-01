@@ -1,0 +1,8 @@
+<ol>
+{{list}}
+  <li ng-repeat="item in items">
+    {{ item.id }}  {{ item.short_name }} {{item.name}} {{item.description}} {{item.price_small}} {{item.price_large}} {{item.small_portion_name}} {{item.large_portion_name}}
+    <button ng-click="onRemove({index: $index});" class="btn btn-default">Remove Item</button>
+  </li>
+</ol>
+<div class="error" ng-hide="items.length > 0">Nothing Found</div>
