@@ -16,6 +16,7 @@
     		restrict: 'E',
     		scope: {
     			items: '<',
+    			searchDone : '<',
     			onRemove : '&'
     		}
 		};
@@ -29,6 +30,7 @@
 		var controller = this;
 		controller.searchString = "";
 		controller.found = "";
+		controller.searchDone = false;
 
 		controller.retrieveData = function()
 		{
@@ -38,6 +40,7 @@
 				MenuSearchService.getMatchedMenuItems(controller.searchString).then(function(foundItems) 
 				{
 					controller.found = foundItems;
+					controller.searchDone = true;
 				});
 			}
 		};
