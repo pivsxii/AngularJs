@@ -9,12 +9,12 @@
 	{
 		var itemsList = this;
 
-		console.log('alo');
+		//console.log('alo');
 
 		itemsList.items = items.menu_items;
 		itemsList.category = items.category;
 
-		console.log(itemsList.category);
+		//console.log(itemsList.category);
 	}
 
 })();

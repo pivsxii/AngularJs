@@ -1,0 +1,21 @@
+<div class="container">
+
+	<div ng-if="userPrefCtrl.data == null" class="alert alert-warning">
+		<strong>Not Signed Up Yet. <a ui-sref="public.sign-up">Sign up Now!</a></strong>
+	</div>
+
+	<div ng-if="userPrefCtrl.data != null">
+		<h1>Your Info</h1>
+		<span>First Name : </span><span>{{userPrefCtrl.data.firstName}}</span>
+		<br/>
+		<span>Last Name : </span><span>{{userPrefCtrl.data.lastName}}</span>
+		<br/>
+		<span>Email : </span><span>{{userPrefCtrl.data.emailAddress}}</span>
+		<br/>
+		<span>Phone : </span><span>{{userPrefCtrl.data.phoneNumber}}</span>
+
+		<h1>Your Favourite Dish</h1>
+		<menu-item menu-item="userPrefCtrl.data.dish"></menu-item>
+	</div>
+
+</div>
